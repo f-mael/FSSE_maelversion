@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
     <title>Wasteland Editor - Fallout Shelter Save Editor | Edit Vaults, Dwellers & Resources</title>
     <meta name="title" content="Wasteland Editor - Fallout Shelter Save Editor">
     <meta name="description" content="Free online Fallout Shelter save file editor. Modify dwellers, resources, rooms, weapons, outfits, and season pass data. Edit vault statistics, lunchboxes, and more with our comprehensive save editor.">
@@ -14,44 +12,24 @@
     <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
     
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://devvyyxyz.github.io/wasteland-editor/">
     <meta property="og:title" content="Wasteland Editor - Fallout Shelter Save Editor">
     <meta property="og:description" content="Free online Fallout Shelter save file editor. Modify dwellers, resources, rooms, weapons, outfits, and season pass data.">
     <meta property="og:site_name" content="Wasteland Editor">
     
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://devvyyxyz.github.io/wasteland-editor/">
     <meta property="twitter:title" content="Wasteland Editor - Fallout Shelter Save Editor">
     <meta property="twitter:description" content="Free online Fallout Shelter save file editor. Modify dwellers, resources, rooms, weapons, outfits, and season pass data.">
     
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://devvyyxyz.github.io/wasteland-editor/">
     
-    <!-- Structured Data -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "Wasteland Editor",
-        "description": "Free online Fallout Shelter save file editor for editing vaults, dwellers, resources, and more",
-        "url": "https://devvyyxyz.github.io/wasteland-editor/",
-        "applicationCategory": "GameApplication",
-        "operatingSystem": "Any",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
-        "author": {
-            "@type": "Person",
-            "name": "devvyyxyz"
-        }
-    }
+    {"@context":"https://schema.org","@type":"WebApplication","name":"Wasteland Editor","description":"Free online Fallout Shelter save file editor for editing vaults, dwellers, resources, and more","url":"https://devvyyxyz.github.io/wasteland-editor/","applicationCategory":"GameApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"devvyyxyz"}}
     </script>
     
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -74,18 +52,10 @@
                 </div>
 
                 <div class="action-buttons">
-                    <button id="downloadBtn" class="btn btn-primary" disabled>
-                        <i class="fas fa-floppy-disk"></i> Download Save
-                    </button>
-                    <button id="formatBtn" class="btn btn-secondary" disabled>
-                        <i class="fas fa-wand-magic-sparkles"></i> Format JSON
-                    </button>
-                    <button id="historyBtn" class="btn btn-secondary" disabled>
-                        <i class="fas fa-history"></i> Change History
-                    </button>
-                    <button id="clearBtn" class="btn btn-secondary" disabled>
-                        <i class="fas fa-trash"></i> Clear
-                    </button>
+                    <button id="downloadBtn" class="btn btn-primary" disabled><i class="fas fa-floppy-disk"></i> Download Save</button>
+                    <button id="formatBtn" class="btn btn-secondary" disabled><i class="fas fa-wand-magic-sparkles"></i> Format JSON</button>
+                    <button id="historyBtn" class="btn btn-secondary" disabled><i class="fas fa-history"></i> Change History</button>
+                    <button id="clearBtn" class="btn btn-secondary" disabled><i class="fas fa-trash"></i> Clear</button>
                 </div>
             </section>
 
@@ -101,124 +71,39 @@
                     <button class="tab-btn" data-tab="raw"><i class="fas fa-code"></i> Raw JSON</button>
                 </div>
 
-                <!-- VAULT TAB -->
                 <div id="vault" class="tab-content active">
                     <div class="vault-panel">
                         <div class="panel-section">
                             <h3><i class="fas fa-gear"></i> Vault Settings</h3>
                             <div class="form-row">
-                                <div class="form-group">
-                                    <label>
-                                        Vault Name:
-                                        <span class="info-icon" title="The name of your vault"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <input type="text" id="vaultName" placeholder="Enter vault name">
-                                </div>
-                                <div class="form-group">
-                                    <label>
-                                        Vault Number:
-                                        <span class="info-icon" title="Your vault number (0-999)"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <input type="number" id="vaultNumber" min="0" max="999" placeholder="0">
-                                </div>
+                                <div class="form-group"><label>Vault Name: <span class="info-icon" title="The name of your vault"><i class="fas fa-circle-info"></i></span></label><input type="text" id="vaultName" placeholder="Enter vault name"></div>
+                                <div class="form-group"><label>Vault Number: <span class="info-icon" title="Your vault number (0-999)"><i class="fas fa-circle-info"></i></span></label><input type="number" id="vaultNumber" min="0" max="999" placeholder="0"></div>
                             </div>
                         </div>
 
                         <div class="panel-section">
                             <h3><i class="fas fa-box-archive"></i> Resources</h3>
                             <div class="form-row">
-                                <div class="form-group">
-                                    <label>
-                                        <i class="fas fa-coins"></i> Caps:
-                                        <span class="info-icon" title="Vault currency for buying and upgrading"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <input type="number" id="caps" min="0" placeholder="0">
-                                </div>
-                                <div class="form-group">
-                                    <label>
-                                        <i class="fas fa-utensils"></i> Food:
-                                        <span class="info-icon" title="Food resources for dweller survival"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <input type="number" id="food" min="0" placeholder="0">
-                                </div>
-                                <div class="form-group">
-                                    <label>
-                                        <i class="fas fa-droplet"></i> Water:
-                                        <span class="info-icon" title="Water resources for dweller survival"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <input type="number" id="water" min="0" placeholder="0">
-                                </div>
-                                <div class="form-group">
-                                    <label>
-                                        <i class="fas fa-bolt"></i> Power:
-                                        <span class="info-icon" title="Energy to keep vault running"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <input type="number" id="power" min="0" placeholder="0">
-                                </div>
+                                <div class="form-group"><label><i class="fas fa-coins"></i> Caps: <span class="info-icon" title="Vault currency for buying and upgrading"><i class="fas fa-circle-info"></i></span></label><input type="number" id="caps" min="0" placeholder="0"></div>
+                                <div class="form-group"><label><i class="fas fa-utensils"></i> Food: <span class="info-icon" title="Food resources for dweller survival"><i class="fas fa-circle-info"></i></span></label><input type="number" id="food" min="0" placeholder="0"></div>
+                                <div class="form-group"><label><i class="fas fa-droplet"></i> Water: <span class="info-icon" title="Water resources for dweller survival"><i class="fas fa-circle-info"></i></span></label><input type="number" id="water" min="0" placeholder="0"></div>
+                                <div class="form-group"><label><i class="fas fa-bolt"></i> Power: <span class="info-icon" title="Energy to keep vault running"><i class="fas fa-circle-info"></i></span></label><input type="number" id="power" min="0" placeholder="0"></div>
                             </div>
                             <div class="form-row">
-                                <div class="form-group">
-                                    <label>
-                                        <i class="fas fa-flask-vial"></i> RadAway:
-                                        <span class="info-icon" title="Medicine to remove radiation"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <input type="number" id="radaway" min="0" placeholder="0">
-                                </div>
-                                <div class="form-group">
-                                    <label>
-                                        <i class="fas fa-heart-pulse"></i> Stimpacks:
-                                        <span class="info-icon" title="Medicine to heal dwellers"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <input type="number" id="stimpacks" min="0" placeholder="0">
-                                </div>
-                                <div class="form-group">
-                                    <label>
-                                        <i class="fas fa-flask"></i> Nuka Cola:
-                                        <span class="info-icon" title="Regular Nuka Cola for various uses"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <input type="number" id="nukacola" min="0" placeholder="0">
-                                </div>
-                                <div class="form-group">
-                                    <label>
-                                        <i class="fas fa-flask"></i> Nuka Cola Quantum:
-                                        <span class="info-icon" title="Premium currency for instant actions"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <input type="number" id="nukaquantum" min="0" placeholder="0">
-                                </div>
+                                <div class="form-group"><label><i class="fas fa-flask-vial"></i> RadAway: <span class="info-icon" title="Medicine to remove radiation"><i class="fas fa-circle-info"></i></span></label><input type="number" id="radaway" min="0" placeholder="0"></div>
+                                <div class="form-group"><label><i class="fas fa-heart-pulse"></i> Stimpacks: <span class="info-icon" title="Medicine to heal dwellers"><i class="fas fa-circle-info"></i></span></label><input type="number" id="stimpacks" min="0" placeholder="0"></div>
+                                <div class="form-group"><label><i class="fas fa-flask"></i> Nuka Cola: <span class="info-icon" title="Regular Nuka Cola for various uses"><i class="fas fa-circle-info"></i></span></label><input type="number" id="nukacola" min="0" placeholder="0"></div>
+                                <div class="form-group"><label><i class="fas fa-flask"></i> Nuka Cola Quantum: <span class="info-icon" title="Premium currency for instant actions"><i class="fas fa-circle-info"></i></span></label><input type="number" id="nukaquantum" min="0" placeholder="0"></div>
                             </div>
                         </div>
 
                         <div class="panel-section">
                             <h3><i class="fas fa-gift"></i> Lunchboxes & Special Items</h3>
                             <div class="form-row">
-                                <div class="form-group">
-                                    <label>
-                                        Lunch Boxes:
-                                        <span class="info-icon" title="Lunchboxes containing random rewards"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <input type="number" id="lunchboxCount" min="0" placeholder="0">
-                                </div>
-                                <div class="form-group">
-                                    <label>
-                                        Mr. Handies:
-                                        <span class="info-icon" title="Robotic helpers for your vault"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <input type="number" id="handyCount" min="0" placeholder="0">
-                                </div>
-                                <div class="form-group">
-                                    <label>
-                                        Pet Carriers:
-                                        <span class="info-icon" title="Carriers containing random pets"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <input type="number" id="petCarrierCount" min="0" placeholder="0">
-                                </div>
-                                <div class="form-group">
-                                    <label>
-                                        Starter Packs:
-                                        <span class="info-icon" title="Special starter pack items"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <input type="number" id="starterPackCount" min="0" placeholder="0">
-                                </div>
+                                <div class="form-group"><label>Lunch Boxes: <span class="info-icon" title="Lunchboxes containing random rewards"><i class="fas fa-circle-info"></i></span></label><input type="number" id="lunchboxCount" min="0" placeholder="0"></div>
+                                <div class="form-group"><label>Mr. Handies: <span class="info-icon" title="Robotic helpers for your vault"><i class="fas fa-circle-info"></i></span></label><input type="number" id="handyCount" min="0" placeholder="0"></div>
+                                <div class="form-group"><label>Pet Carriers: <span class="info-icon" title="Carriers containing random pets"><i class="fas fa-circle-info"></i></span></label><input type="number" id="petCarrierCount" min="0" placeholder="0"></div>
+                                <div class="form-group"><label>Starter Packs: <span class="info-icon" title="Special starter pack items"><i class="fas fa-circle-info"></i></span></label><input type="number" id="starterPackCount" min="0" placeholder="0"></div>
                             </div>
                         </div>
 
@@ -239,7 +124,6 @@
                     </div>
                 </div>
 
-                <!-- DWELLERS TAB -->
                 <div id="dwellers" class="tab-content">
                     <div class="dwellers-panel">
                         <div class="dwellers-list-container">
@@ -271,194 +155,84 @@
                             <div id="dwellerDetailsContent" style="display:none;">
                                 <a href="#" class="back-link">← Back</a>
                                 <div class="panel-section">
-                                <h3 id="dwellerName"><i class="fas fa-user"></i> Dweller</h3>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label>
-                                            <i class="fas fa-id-card"></i> First Name:
-                                            <span class="info-icon" title="Dweller's first name"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="text" id="dwellerFirstName" placeholder="First name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>
-                                            <i class="fas fa-id-card"></i> Last Name:
-                                            <span class="info-icon" title="Dweller's last name"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="text" id="dwellerLastName" placeholder="Last name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>
-                                            <i class="fas fa-venus-mars"></i> Gender:
-                                            <span class="info-icon" title="Dweller's gender (1=Female, 2=Male)"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <select id="dwellerGender">
-                                            <option value="1">Female</option>
-                                            <option value="2">Male</option>
-                                        </select>
+                                    <h3 id="dwellerName"><i class="fas fa-user"></i> Dweller</h3>
+                                    <div class="form-row">
+                                        <div class="form-group"><label><i class="fas fa-id-card"></i> First Name: <span class="info-icon" title="Dweller's first name"><i class="fas fa-circle-info"></i></span></label><input type="text" id="dwellerFirstName" placeholder="First name"></div>
+                                        <div class="form-group"><label><i class="fas fa-id-card"></i> Last Name: <span class="info-icon" title="Dweller's last name"><i class="fas fa-circle-info"></i></span></label><input type="text" id="dwellerLastName" placeholder="Last name"></div>
+                                        <div class="form-group"><label><i class="fas fa-venus-mars"></i> Gender: <span class="info-icon" title="Dweller's gender (1=Female, 2=Male)"><i class="fas fa-circle-info"></i></span></label><select id="dwellerGender"><option value="1">Female</option><option value="2">Male</option></select></div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="panel-section">
-                                <h3><i class="fas fa-palette"></i> Appearance</h3>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label>
-                                            <i class="fas fa-droplet"></i> Skin Color:
-                                            <span class="info-icon" title="Dweller's skin color (click to change)"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="color" id="dwellerSkinColor">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>
-                                            Hair Color:
-                                            <span class="info-icon" title="Dweller's hair color (click to change)"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="color" id="dwellerHairColor">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>
-                                            <i class="fas fa-scissors"></i> Hair Style:
-                                            <span class="info-icon" title="Hair style number (1-30+)"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="number" id="dwellerHairStyle" min="1" max="50" placeholder="10">
+                                <div class="panel-section">
+                                    <h3><i class="fas fa-palette"></i> Appearance</h3>
+                                    <div class="form-row">
+                                        <div class="form-group"><label><i class="fas fa-droplet"></i> Skin Color: <span class="info-icon" title="Dweller's skin color (click to change)"><i class="fas fa-circle-info"></i></span></label><input type="color" id="dwellerSkinColor"></div>
+                                        <div class="form-group"><label>Hair Color: <span class="info-icon" title="Dweller's hair color (click to change)"><i class="fas fa-circle-info"></i></span></label><input type="color" id="dwellerHairColor"></div>
+                                        <div class="form-group"><label><i class="fas fa-scissors"></i> Hair Style: <span class="info-icon" title="Hair style number (1-30+)"><i class="fas fa-circle-info"></i></span></label><input type="number" id="dwellerHairStyle" min="1" max="50" placeholder="10"></div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="panel-section">
-                                <h3><i class="fas fa-info-circle"></i> Dweller Info</h3>
-                                <p style="color: #D32F2F; margin: 0 0 15px 0; padding: 10px; background: rgba(211, 47, 47, 0.1); border-left: 3px solid #D32F2F; border-radius: 4px;">
-                                    <i class="fas fa-exclamation-triangle"></i> <strong>Warning:</strong> Modifying dweller data incorrectly can break or corrupt your game save. Always create a backup before editing.
-                                </p>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label>
-                                            <i class="fas fa-hashtag"></i> Serialize ID:
-                                            <span class="info-icon" title="Unique dweller identifier"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="number" id="dwellerSerializeId" min="1" placeholder="1" disabled>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>
-                                            <i class="fas fa-star"></i> Rarity:
-                                            <span class="info-icon" title="Dweller rarity type"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <select id="dwellerRarity">
-                                            <option value="Common">Common</option>
-                                            <option value="Rare">Rare</option>
-                                            <option value="Legendary">Legendary</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>
-                                            <i class="fas fa-door-open"></i> Assigned Room:
-                                            <span class="info-icon" title="Room ID where dweller is assigned"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="number" id="dwellerSavedRoom" min="-1" placeholder="-1">
+                                <div class="panel-section">
+                                    <h3><i class="fas fa-info-circle"></i> Dweller Info</h3>
+                                    <p style="color: #D32F2F; margin: 0 0 15px 0; padding: 10px; background: rgba(211, 47, 47, 0.1); border-left: 3px solid #D32F2F; border-radius: 4px;">
+                                        <i class="fas fa-exclamation-triangle"></i> <strong>Warning:</strong> Modifying dweller data incorrectly can break or corrupt your game save. Always create a backup before editing.
+                                    </p>
+                                    <div class="form-row">
+                                        <div class="form-group"><label><i class="fas fa-hashtag"></i> Serialize ID: <span class="info-icon" title="Unique dweller identifier"><i class="fas fa-circle-info"></i></span></label><input type="number" id="dwellerSerializeId" min="1" placeholder="1" disabled></div>
+                                        <div class="form-group"><label><i class="fas fa-star"></i> Rarity: <span class="info-icon" title="Dweller rarity type"><i class="fas fa-circle-info"></i></span></label><select id="dwellerRarity"><option value="Common">Common</option><option value="Rare">Rare</option><option value="Legendary">Legendary</option></select></div>
+                                        <div class="form-group"><label><i class="fas fa-door-open"></i> Assigned Room: <span class="info-icon" title="Room ID where dweller is assigned"><i class="fas fa-circle-info"></i></span></label><input type="number" id="dwellerSavedRoom" min="-1" placeholder="-1"></div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="panel-section">
-                                <h3><i class="fas fa-heart"></i> Relationships</h3>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label>
-                                            <i class="fas fa-baby"></i> Pregnant:
-                                            <span class="info-icon" title="Is dweller pregnant?"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <select id="dwellerPregnant">
-                                            <option value="false">No</option>
-                                            <option value="true">Yes</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>
-                                            <i class="fas fa-baby-carriage"></i> Baby Ready:
-                                            <span class="info-icon" title="Is baby ready to be born?"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <select id="dwellerBabyReady">
-                                            <option value="false">No</option>
-                                            <option value="true">Yes</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>
-                                            <i class="fas fa-ring"></i> Partner ID:
-                                            <span class="info-icon" title="Partner dweller serialize ID (-1 = none)"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="number" id="dwellerPartner" min="-1" placeholder="-1">
+                                <div class="panel-section">
+                                    <h3><i class="fas fa-heart"></i> Relationships</h3>
+                                    <div class="form-row">
+                                        <div class="form-group"><label><i class="fas fa-baby"></i> Pregnant: <span class="info-icon" title="Is dweller pregnant?"><i class="fas fa-circle-info"></i></span></label><select id="dwellerPregnant"><option value="false">No</option><option value="true">Yes</option></select></div>
+                                        <div class="form-group"><label><i class="fas fa-baby-carriage"></i> Baby Ready: <span class="info-icon" title="Is baby ready to be born?"><i class="fas fa-circle-info"></i></span></label><select id="dwellerBabyReady"><option value="false">No</option><option value="true">Yes</option></select></div>
+                                        <div class="form-group"><label><i class="fas fa-ring"></i> Partner ID: <span class="info-icon" title="Partner dweller serialize ID (-1 = none)"><i class="fas fa-circle-info"></i></span></label><input type="number" id="dwellerPartner" min="-1" placeholder="-1"></div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="panel-section">
-                                <h3>Stats & Health</h3>
-                                <div class="stats-grid">
-                                    <div class="stat-item"><label title="Strength - Affects melee damage and power generation">S:</label><input type="number" id="stat-s" min="1" max="10" placeholder="1"></div>
-                                    <div class="stat-item"><label title="Perception - Affects hit chance and water production">P:</label><input type="number" id="stat-p" min="1" max="10" placeholder="1"></div>
-                                    <div class="stat-item"><label title="Endurance - Affects health and exploration">E:</label><input type="number" id="stat-e" min="1" max="10" placeholder="1"></div>
-                                    <div class="stat-item"><label title="Charisma - Affects reproduction and radio station">C:</label><input type="number" id="stat-c" min="1" max="10" placeholder="1"></div>
-                                    <div class="stat-item"><label title="Intelligence - Affects medicine and science labs">I:</label><input type="number" id="stat-i" min="1" max="10" placeholder="1"></div>
-                                    <div class="stat-item"><label title="Agility - Affects food production">A:</label><input type="number" id="stat-a" min="1" max="10" placeholder="1"></div>
-                                    <div class="stat-item"><label title="Luck - Affects rush success and critical hits">L:</label><input type="number" id="stat-l" min="1" max="10" placeholder="1"></div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label>Level: <span class="info-icon" title="Dweller's current level (max 50)"><i class="fas fa-circle-info"></i></span></label>
-                                        <input type="number" id="dwellerLevel" min="1" placeholder="1">
+                                <div class="panel-section">
+                                    <h3>Stats & Health</h3>
+                                    <div class="stats-grid">
+                                        <div class="stat-item"><label title="Strength - Affects melee damage and power generation">S:</label><input type="number" id="stat-s" min="1" max="10" placeholder="1"></div>
+                                        <div class="stat-item"><label title="Perception - Affects hit chance and water production">P:</label><input type="number" id="stat-p" min="1" max="10" placeholder="1"></div>
+                                        <div class="stat-item"><label title="Endurance - Affects health and exploration">E:</label><input type="number" id="stat-e" min="1" max="10" placeholder="1"></div>
+                                        <div class="stat-item"><label title="Charisma - Affects reproduction and radio station">C:</label><input type="number" id="stat-c" min="1" max="10" placeholder="1"></div>
+                                        <div class="stat-item"><label title="Intelligence - Affects medicine and science labs">I:</label><input type="number" id="stat-i" min="1" max="10" placeholder="1"></div>
+                                        <div class="stat-item"><label title="Agility - Affects food production">A:</label><input type="number" id="stat-a" min="1" max="10" placeholder="1"></div>
+                                        <div class="stat-item"><label title="Luck - Affects rush success and critical hits">L:</label><input type="number" id="stat-l" min="1" max="10" placeholder="1"></div>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Experience: <span class="info-icon" title="XP earned toward next level"><i class="fas fa-circle-info"></i></span></label>
-                                        <input type="number" id="dwellerExp" min="0" placeholder="0">
+                                    <div class="form-row">
+                                        <div class="form-group"><label>Level: <span class="info-icon" title="Dweller's current level (max 50)"><i class="fas fa-circle-info"></i></span></label><input type="number" id="dwellerLevel" min="1" placeholder="1"></div>
+                                        <div class="form-group"><label>Experience: <span class="info-icon" title="XP earned toward next level"><i class="fas fa-circle-info"></i></span></label><input type="number" id="dwellerExp" min="0" placeholder="0"></div>
+                                        <div class="form-group"><label>Health: <span class="info-icon" title="Current health points"><i class="fas fa-circle-info"></i></span></label><input type="number" id="dwellerHealth" min="0" placeholder="0"></div>
+                                        <div class="form-group"><label>Max Health: <span class="info-icon" title="Maximum health based on Endurance"><i class="fas fa-circle-info"></i></span></label><input type="number" id="dwellerMaxHealth" min="0" placeholder="100"></div>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Health: <span class="info-icon" title="Current health points"><i class="fas fa-circle-info"></i></span></label>
-                                        <input type="number" id="dwellerHealth" min="0" placeholder="0">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Max Health: <span class="info-icon" title="Maximum health based on Endurance"><i class="fas fa-circle-info"></i></span></label>
-                                        <input type="number" id="dwellerMaxHealth" min="0" placeholder="100">
+                                    <div class="form-row">
+                                        <div class="form-group"><label>Happiness (%): <span class="info-icon" title="Dweller morale (0-100)"><i class="fas fa-circle-info"></i></span></label><input type="number" id="dwellerHappiness" min="0" max="100" placeholder="100"></div>
+                                        <div class="form-group"><label>Radiation: <span class="info-icon" title="Radiation damage (reduces max health)"><i class="fas fa-circle-info"></i></span></label><input type="number" id="dwellerRadiation" min="0" placeholder="0"></div>
                                     </div>
                                 </div>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label>Happiness (%): <span class="info-icon" title="Dweller morale (0-100)"><i class="fas fa-circle-info"></i></span></label>
-                                        <input type="number" id="dwellerHappiness" min="0" max="100" placeholder="100">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Radiation: <span class="info-icon" title="Radiation damage (reduces max health)"><i class="fas fa-circle-info"></i></span></label>
-                                        <input type="number" id="dwellerRadiation" min="0" placeholder="0">
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="panel-section">
-                                <h3>Equipment</h3>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label>Outfit: <span class="info-icon" title="Clothing that provides SPECIAL bonuses"><i class="fas fa-circle-info"></i></span></label>
-                                        <select id="dwellerOutfit"></select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Weapon: <span class="info-icon" title="Equipped weapon for combat"><i class="fas fa-circle-info"></i></span></label>
-                                        <select id="dwellerWeapon"></select>
+                                <div class="panel-section">
+                                    <h3>Equipment</h3>
+                                    <div class="form-row">
+                                        <div class="form-group"><label>Outfit: <span class="info-icon" title="Clothing that provides SPECIAL bonuses"><i class="fas fa-circle-info"></i></span></label><select id="dwellerOutfit"></select></div>
+                                        <div class="form-group"><label>Weapon: <span class="info-icon" title="Equipped weapon for combat"><i class="fas fa-circle-info"></i></span></label><select id="dwellerWeapon"></select></div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="button-grid">
-                                <button class="btn btn-secondary" id="maxStatsBtn">Max All Stats</button>
-                                <button class="btn btn-secondary" id="saveDwellerBtn">Save Changes</button>
-                            </div>
+                                <div class="button-grid">
+                                    <button class="btn btn-secondary" id="maxStatsBtn">Max All Stats</button>
+                                    <button class="btn btn-secondary" id="saveDwellerBtn">Save Changes</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- ROOMS TAB -->
                 <div id="rooms" class="tab-content">
                     <div class="rooms-panel">
                         <div class="rooms-list-container">
@@ -479,102 +253,41 @@
                             <div id="roomDetailsContent" style="display:none;">
                                 <a href="#" class="back-link">← Back</a>
                                 <div class="panel-section">
-                                <h3>Room Settings</h3>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label>
-                                            Room Name:
-                                            <span class="info-icon" title="The name or identifier of this room"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="text" id="roomName" placeholder="Room name">
+                                    <h3>Room Settings</h3>
+                                    <div class="form-row">
+                                        <div class="form-group"><label>Room Name: <span class="info-icon" title="The name or identifier of this room"><i class="fas fa-circle-info"></i></span></label><input type="text" id="roomName" placeholder="Room name"></div>
+                                        <div class="form-group"><label>Type: <span class="info-icon" title="Room type (e.g., Diner, Barracks, Power Plant)"><i class="fas fa-circle-info"></i></span></label><input type="text" id="roomType" placeholder="Room type"></div>
                                     </div>
-                                    <div class="form-group">
-                                        <label>
-                                            Type:
-                                            <span class="info-icon" title="Room type (e.g., Diner, Barracks, Power Plant)"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="text" id="roomType" placeholder="Room type">
+                                    <div class="form-row">
+                                        <div class="form-group"><label>Level: <span class="info-icon" title="Room upgrade level (1-3)"><i class="fas fa-circle-info"></i></span></label><input type="number" id="roomLevel" min="1" max="3"></div>
+                                        <div class="form-group"><label>State: <span class="info-icon" title="Current room state (e.g., Idle, Occupied)"><i class="fas fa-circle-info"></i></span></label><input type="text" id="roomState" placeholder="e.g., Idle"></div>
                                     </div>
                                 </div>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label>
-                                            Level:
-                                            <span class="info-icon" title="Room upgrade level (1-3)"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="number" id="roomLevel" min="1" max="3">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>
-                                            State:
-                                            <span class="info-icon" title="Current room state (e.g., Idle, Occupied)"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="text" id="roomState" placeholder="e.g., Idle">
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="panel-section">
-                                <h3>Production</h3>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label>
-                                            Power Generation:
-                                            <span class="info-icon" title="Amount of power this room generates per cycle"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="number" id="roomPower" min="0">
+                                <div class="panel-section">
+                                    <h3>Production</h3>
+                                    <div class="form-row">
+                                        <div class="form-group"><label>Power Generation: <span class="info-icon" title="Amount of power this room generates per cycle"><i class="fas fa-circle-info"></i></span></label><input type="number" id="roomPower" min="0"></div>
+                                        <div class="form-group"><label>Food Production: <span class="info-icon" title="Amount of food this room produces per cycle"><i class="fas fa-circle-info"></i></span></label><input type="number" id="roomFood" min="0"></div>
                                     </div>
-                                    <div class="form-group">
-                                        <label>
-                                            Food Production:
-                                            <span class="info-icon" title="Amount of food this room produces per cycle"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="number" id="roomFood" min="0">
+                                    <div class="form-row">
+                                        <div class="form-group"><label>Water Production: <span class="info-icon" title="Amount of water this room produces per cycle"><i class="fas fa-circle-info"></i></span></label><input type="number" id="roomWater" min="0"></div>
+                                        <div class="form-group"><label>Radiation: <span class="info-icon" title="Radiation level in this room (0-100)"><i class="fas fa-circle-info"></i></span></label><input type="number" id="roomRadiation" min="0" max="100"></div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group"><label>Rush Timer: <span class="info-icon" title="Seconds until room can be rushed again"><i class="fas fa-circle-info"></i></span></label><input type="number" id="roomRushTimer" min="0"></div>
+                                        <div class="form-group"><label>Merge Size: <span class="info-icon" title="How many rooms merged (1-3)"><i class="fas fa-circle-info"></i></span></label><input type="number" id="roomMergeSize" min="1" max="3"></div>
                                     </div>
                                 </div>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label>
-                                            Water Production:
-                                            <span class="info-icon" title="Amount of water this room produces per cycle"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="number" id="roomWater" min="0">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>
-                                            Radiation:
-                                            <span class="info-icon" title="Radiation level in this room (0-100)"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="number" id="roomRadiation" min="0" max="100">
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label>
-                                            Rush Timer:
-                                            <span class="info-icon" title="Seconds until room can be rushed again"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="number" id="roomRushTimer" min="0">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>
-                                            Merge Size:
-                                            <span class="info-icon" title="How many rooms merged (1-3)"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="number" id="roomMergeSize" min="1" max="3">
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="form-row" style="gap: 10px; padding-top: 15px; border-top: 1px solid var(--border-color); margin-top: 15px;">
-                                <button id="saveRoomBtn" class="btn btn-primary">Save Room</button>
-                            </div>
+                                <div class="form-row" style="gap: 10px; padding-top: 15px; border-top: 1px solid var(--border-color); margin-top: 15px;">
+                                    <button id="saveRoomBtn" class="btn btn-primary">Save Room</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- WASTELAND TAB -->
                 <div id="wasteland" class="tab-content">
                     <div class="wasteland-panel">
                         <div id="wastelandEmptyState" class="empty-state">
@@ -591,64 +304,24 @@
                             <div class="panel-section">
                                 <h3 id="wastelandTeamName">Team</h3>
                                 <div class="form-row">
-                                    <div class="form-group">
-                                        <label>
-                                            Team ID:
-                                            <span class="info-icon" title="Unique identifier for this team"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="text" id="teamId" placeholder="Team ID" readonly>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>
-                                            Status:
-                                            <span class="info-icon" title="Current team status"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <select id="teamStatus">
-                                            <option value="exploring">Exploring</option>
-                                            <option value="returning">Returning</option>
-                                            <option value="idle">Idle</option>
-                                        </select>
-                                    </div>
+                                    <div class="form-group"><label>Team ID: <span class="info-icon" title="Unique identifier for this team"><i class="fas fa-circle-info"></i></span></label><input type="text" id="teamId" placeholder="Team ID" readonly></div>
+                                    <div class="form-group"><label>Status: <span class="info-icon" title="Current team status"><i class="fas fa-circle-info"></i></span></label><select id="teamStatus"><option value="exploring">Exploring</option><option value="returning">Returning</option><option value="idle">Idle</option></select></div>
                                 </div>
                             </div>
 
                             <div class="panel-section">
                                 <h3>Quest Information</h3>
                                 <div class="form-row">
-                                    <div class="form-group">
-                                        <label>
-                                            Quest ID:
-                                            <span class="info-icon" title="Current quest identifier"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="text" id="teamQuestId" placeholder="Quest ID">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>
-                                            Quest Progress:
-                                            <span class="info-icon" title="Progress percentage (0-100)"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="number" id="teamQuestProgress" min="0" max="100" placeholder="0">
-                                    </div>
+                                    <div class="form-group"><label>Quest ID: <span class="info-icon" title="Current quest identifier"><i class="fas fa-circle-info"></i></span></label><input type="text" id="teamQuestId" placeholder="Quest ID"></div>
+                                    <div class="form-group"><label>Quest Progress: <span class="info-icon" title="Progress percentage (0-100)"><i class="fas fa-circle-info"></i></span></label><input type="number" id="teamQuestProgress" min="0" max="100" placeholder="0"></div>
                                 </div>
                             </div>
 
                             <div class="panel-section">
                                 <h3>Resources</h3>
                                 <div class="form-row">
-                                    <div class="form-group">
-                                        <label>
-                                            Caps Collected:
-                                            <span class="info-icon" title="Caps collected during exploration"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="number" id="teamCaps" min="0" placeholder="0">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>
-                                            Items Found:
-                                            <span class="info-icon" title="Number of items collected"><i class="fas fa-circle-info"></i></span>
-                                        </label>
-                                        <input type="number" id="teamItems" min="0" placeholder="0">
-                                    </div>
+                                    <div class="form-group"><label>Caps Collected: <span class="info-icon" title="Caps collected during exploration"><i class="fas fa-circle-info"></i></span></label><input type="number" id="teamCaps" min="0" placeholder="0"></div>
+                                    <div class="form-group"><label>Items Found: <span class="info-icon" title="Number of items collected"><i class="fas fa-circle-info"></i></span></label><input type="number" id="teamItems" min="0" placeholder="0"></div>
                                 </div>
                             </div>
 
@@ -661,60 +334,54 @@
                     </div>
                 </div>
 
-                <!-- INVENTORY TAB -->
                 <div id="inventory" class="tab-content">
                     <div class="inventory-panel">
                         <div id="inventoryEmptyState" class="empty-state">
                             <i class="fas fa-folder"></i> No vault loaded yet!<br><small>Upload a save file to get started</small>
                         </div>
                         <div id="inventoryContent" style="display:none;">
-                        <!-- Inventory Subtabs -->
-                        <div class="inventory-subtabs">
-                            <button class="inventory-subtab-btn active" data-subtab="weapons"><i class="fas fa-gun"></i> Weapons</button>
-                            <button class="inventory-subtab-btn" data-subtab="outfits"><i class="fas fa-vest"></i> Outfits</button>
-                            <button class="inventory-subtab-btn" data-subtab="junk"><i class="fas fa-wrench"></i> Junk</button>
-                        </div>
-
-                        <!-- Weapons Inventory -->
-                        <div id="weapons-inventory" class="inventory-subtab-content active">
-                            <div class="inventory-header">
-                                <h3><i class="fas fa-gun"></i> Weapon Storage</h3>
-                                <div class="inventory-actions">
-                                    <input type="text" id="weaponSearch" class="search-input" placeholder="Search weapons...">
-                                    <button class="btn btn-secondary" id="addWeaponBtn"><i class="fas fa-plus"></i> Add Weapon</button>
-                                </div>
+                            <div class="inventory-subtabs">
+                                <button class="inventory-subtab-btn active" data-subtab="weapons"><i class="fas fa-gun"></i> Weapons</button>
+                                <button class="inventory-subtab-btn" data-subtab="outfits"><i class="fas fa-vest"></i> Outfits</button>
+                                <button class="inventory-subtab-btn" data-subtab="junk"><i class="fas fa-wrench"></i> Junk</button>
                             </div>
-                            <div id="weaponsList" class="inventory-list"></div>
-                        </div>
 
-                        <!-- Outfits Inventory -->
-                        <div id="outfits-inventory" class="inventory-subtab-content">
-                            <div class="inventory-header">
-                                <h3><i class="fas fa-shirt"></i> Outfit Storage</h3>
-                                <div class="inventory-actions">
-                                    <input type="text" id="outfitSearch" class="search-input" placeholder="Search outfits...">
-                                    <button class="btn btn-secondary" id="addOutfitBtn"><i class="fas fa-plus"></i> Add Outfit</button>
+                            <div id="weapons-inventory" class="inventory-subtab-content active">
+                                <div class="inventory-header">
+                                    <h3><i class="fas fa-gun"></i> Weapon Storage</h3>
+                                    <div class="inventory-actions">
+                                        <input type="text" id="weaponSearch" class="search-input" placeholder="Search weapons...">
+                                        <button class="btn btn-secondary" id="addWeaponBtn"><i class="fas fa-plus"></i> Add Weapon</button>
+                                    </div>
                                 </div>
+                                <div id="weaponsList" class="inventory-list"></div>
                             </div>
-                            <div id="outfitsList" class="inventory-list"></div>
-                        </div>
 
-                        <!-- Junk Inventory -->
-                        <div id="junk-inventory" class="inventory-subtab-content">
-                            <div class="inventory-header">
-                                <h3><i class="fas fa-box"></i> Junk Storage</h3>
-                                <div class="inventory-actions">
-                                    <input type="text" id="junkSearch" class="search-input" placeholder="Search junk...">
-                                    <button class="btn btn-secondary" id="addJunkBtn"><i class="fas fa-plus"></i> Add Junk</button>
+                            <div id="outfits-inventory" class="inventory-subtab-content">
+                                <div class="inventory-header">
+                                    <h3><i class="fas fa-shirt"></i> Outfit Storage</h3>
+                                    <div class="inventory-actions">
+                                        <input type="text" id="outfitSearch" class="search-input" placeholder="Search outfits...">
+                                        <button class="btn btn-secondary" id="addOutfitBtn"><i class="fas fa-plus"></i> Add Outfit</button>
+                                    </div>
                                 </div>
+                                <div id="outfitsList" class="inventory-list"></div>
                             </div>
-                            <div id="junkList" class="inventory-list"></div>
-                        </div>
+
+                            <div id="junk-inventory" class="inventory-subtab-content">
+                                <div class="inventory-header">
+                                    <h3><i class="fas fa-box"></i> Junk Storage</h3>
+                                    <div class="inventory-actions">
+                                        <input type="text" id="junkSearch" class="search-input" placeholder="Search junk...">
+                                        <button class="btn btn-secondary" id="addJunkBtn"><i class="fas fa-plus"></i> Add Junk</button>
+                                    </div>
+                                </div>
+                                <div id="junkList" class="inventory-list"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- SEASON PASS TAB -->
                 <div id="seasonpass" class="tab-content">
                     <div class="seasonpass-panel">
                         <div class="panel-section">
@@ -723,76 +390,20 @@
                                 <i class="fas fa-exclamation-triangle"></i> <strong>Warning:</strong> Modifying season pass data may violate the game's Terms of Service and could result in account penalties.
                             </p>
                             <div class="form-row">
-                                <div class="form-group">
-                                    <label>
-                                        Current Season:
-                                        <span class="info-icon" title="Select which season to edit"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <select id="currentSeason">
-                                        <option value="">-- Select Season --</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>
-                                        Season Level:
-                                        <span class="info-icon" title="Current level/tier in the season pass"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <input type="number" id="currentLevel" min="0" placeholder="0">
-                                </div>
+                                <div class="form-group"><label>Current Season: <span class="info-icon" title="Select which season to edit"><i class="fas fa-circle-info"></i></span></label><select id="currentSeason"><option value="">-- Select Season --</option></select></div>
+                                <div class="form-group"><label>Season Level: <span class="info-icon" title="Current level/tier in the season pass"><i class="fas fa-circle-info"></i></span></label><input type="number" id="currentLevel" min="0" placeholder="0"></div>
                             </div>
                             <div class="form-row">
-                                <div class="form-group">
-                                    <label>
-                                        Season Tokens/XP:
-                                        <span class="info-icon" title="Experience/tokens in current season"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <input type="number" id="currentTokens" min="0" placeholder="0">
-                                </div>
-                                <div class="form-group">
-                                    <label>
-                                        Schema Version:
-                                        <span class="info-icon" title="Season pass data schema version"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <input type="number" id="schemaVersion" min="0" placeholder="0">
-                                </div>
+                                <div class="form-group"><label>Season Tokens/XP: <span class="info-icon" title="Experience/tokens in current season"><i class="fas fa-circle-info"></i></span></label><input type="number" id="currentTokens" min="0" placeholder="0"></div>
+                                <div class="form-group"><label>Schema Version: <span class="info-icon" title="Season pass data schema version"><i class="fas fa-circle-info"></i></span></label><input type="number" id="schemaVersion" min="0" placeholder="0"></div>
                             </div>
                             <div class="form-row">
-                                <div class="form-group">
-                                    <label>
-                                        Premium Pass:
-                                        <span class="info-icon" title="Whether premium season pass is unlocked for current season"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <select id="isPremium">
-                                        <option value="false">No</option>
-                                        <option value="true">Yes</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>
-                                        Premium Plus:
-                                        <span class="info-icon" title="Whether premium plus tier is unlocked"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <select id="isPremiumPlus">
-                                        <option value="false">No</option>
-                                        <option value="true">Yes</option>
-                                    </select>
-                                </div>
+                                <div class="form-group"><label>Premium Pass: <span class="info-icon" title="Whether premium season pass is unlocked for current season"><i class="fas fa-circle-info"></i></span></label><select id="isPremium"><option value="false">No</option><option value="true">Yes</option></select></div>
+                                <div class="form-group"><label>Premium Plus: <span class="info-icon" title="Whether premium plus tier is unlocked"><i class="fas fa-circle-info"></i></span></label><select id="isPremiumPlus"><option value="false">No</option><option value="true">Yes</option></select></div>
                             </div>
                             <div class="form-row">
-                                <div class="form-group">
-                                    <label>
-                                        Max Rank Achieved:
-                                        <span class="info-icon" title="Highest rank achieved in current season"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <input type="number" id="maxRankAchieved" min="0" placeholder="0">
-                                </div>
-                                <div class="form-group">
-                                    <label>
-                                        Battle Pass Level:
-                                        <span class="info-icon" title="Last observed battle pass window level"><i class="fas fa-circle-info"></i></span>
-                                    </label>
-                                    <input type="number" id="battlepassWindowLevel" min="0" placeholder="0">
-                                </div>
+                                <div class="form-group"><label>Max Rank Achieved: <span class="info-icon" title="Highest rank achieved in current season"><i class="fas fa-circle-info"></i></span></label><input type="number" id="maxRankAchieved" min="0" placeholder="0"></div>
+                                <div class="form-group"><label>Battle Pass Level: <span class="info-icon" title="Last observed battle pass window level"><i class="fas fa-circle-info"></i></span></label><input type="number" id="battlepassWindowLevel" min="0" placeholder="0"></div>
                             </div>
                         </div>
 
@@ -816,15 +427,12 @@
                                 <button class="btn btn-secondary" id="maxSeasonLevelBtn">Max Season Level</button>
                                 <button class="btn btn-secondary" id="unlockAllRewardsBtn">Unlock All Rewards</button>
                                 <button class="btn btn-secondary" id="enablePremiumBtn">Enable Premium Pass</button>
-                                <button class="btn btn-primary" id="downloadSeasonPassBtn" disabled>
-                                    <i class="fas fa-floppy-disk"></i> Download Season Pass
-                                </button>
+                                <button class="btn btn-primary" id="downloadSeasonPassBtn" disabled><i class="fas fa-floppy-disk"></i> Download Season Pass</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- OTHERS TAB -->
                 <div id="others" class="tab-content">
                     <div class="others-panel">
                         <div class="panel-section">
@@ -851,12 +459,9 @@
                     </div>
                 </div>
 
-                <!-- RAW JSON TAB -->
                 <div id="raw" class="tab-content">
                     <textarea id="jsonEditor" class="json-editor" placeholder="Raw JSON editor..."></textarea>
                 </div>
-
-                <!-- GUIDES removed from editor tabs; displayed below editor -->
 
                 <div class="editor-info">
                     <span id="fileSize">Size: 0 B</span>
@@ -870,16 +475,13 @@
             </section>
         </main>
 
-        <!-- Guides / Tutorials Section (placed below editor, above Vault Statistics) -->
         <section class="guides-section">
             <div class="panel-section">
                 <div class="guides-panel">
                     <div class="guides-list-container">
                         <h3><i class="fas fa-book-open"></i> Guides & Tutorials</h3>
                         <input type="text" id="guideSearch" class="search-input" placeholder="Search guides...">
-                        <div id="guidesList" class="dwellers-list" style="margin-top:8px;">
-                            <!-- JS will populate guide items here -->
-                        </div>
+                        <div id="guidesList" class="dwellers-list" style="margin-top:8px;"></div>
                     </div>
                     <div class="guide-details">
                         <div id="guideDetailsEmptyState" class="no-data-message">
@@ -902,7 +504,6 @@
             </div>
         </section>
 
-        <!-- Vault Statistics Section -->
         <section class="vault-stats-section" id="vaultStatsSection">
             <h2><i class="fas fa-chart-bar"></i> Vault Statistics</h2>
             <div class="stats-no-data" id="statsNoData">
@@ -962,7 +563,6 @@
             </div>
         </section>
 
-        <!-- Vault Layout Visualizer Section -->
         <section class="vault-layout-section" id="vaultLayoutSection">
             <h2><i class="fas fa-building-columns"></i> Vault Layout <span class="beta-badge">BETA</span></h2>
             <div class="layout-no-data" id="layoutNoData">
@@ -982,7 +582,6 @@
             </div>
         </section>
 
-        <!-- Add Inventory Modal -->
         <div id="addInventoryModal" class="inventory-modal">
             <div class="inventory-modal-content">
                 <div class="inventory-modal-header">
@@ -992,9 +591,7 @@
                 <div class="panel-section">
                     <div class="form-row">
                         <label for="modalItemSelect">Select Item:</label>
-                        <select id="modalItemSelect" class="form-control">
-                            <option value="">Choose...</option>
-                        </select>
+                        <select id="modalItemSelect" class="form-control"><option value="">Choose...</option></select>
                     </div>
                     <div class="form-row">
                         <label for="modalQuantity">Quantity:</label>
@@ -1012,7 +609,6 @@
             </div>
         </div>
 
-        <!-- Change History Modal -->
         <div id="historyModal" class="inventory-modal">
             <div class="inventory-modal-content" style="max-width: 800px;">
                 <div class="inventory-modal-header">
@@ -1028,7 +624,6 @@
             </div>
         </div>
 
-        <!-- Guide Modal -->
         <div id="guideModal" class="inventory-modal">
             <div class="inventory-modal-content" style="max-width: 900px;">
                 <div class="inventory-modal-header">
@@ -1036,9 +631,7 @@
                     <button class="inventory-modal-close" onclick="closeGuideModal()">×</button>
                 </div>
                 <div class="panel-section">
-                    <div id="guideVideoContainer" style="margin-bottom: 15px;">
-                        <!-- Video iframe or placeholder inserted by JS -->
-                    </div>
+                    <div id="guideVideoContainer" style="margin-bottom: 15px;"></div>
                     <div id="guideContent"></div>
                 </div>
                 <div class="button-grid" style="margin-top: 20px;">
@@ -1047,7 +640,6 @@
             </div>
         </div>
 
-        <!-- Season Pass Download Warning Modal - Step 1 -->
         <div id="seasonPassWarningModal" class="inventory-modal">
             <div class="inventory-modal-content" style="max-width: 600px;">
                 <div class="inventory-modal-header">
@@ -1055,12 +647,8 @@
                     <button class="inventory-modal-close" onclick="closeSeasonPassWarning()">×</button>
                 </div>
                 <div class="panel-section">
-                    <p style="color: #D32F2F; font-weight: bold; margin-bottom: 15px;">
-                        <i class="fas fa-exclamation-triangle"></i> IMPORTANT LEGAL WARNING
-                    </p>
-                    <p style="margin-bottom: 15px;">
-                        By downloading a modified season pass file, you acknowledge that:
-                    </p>
+                    <p style="color: #D32F2F; font-weight: bold; margin-bottom: 15px;"><i class="fas fa-exclamation-triangle"></i> IMPORTANT LEGAL WARNING</p>
+                    <p style="margin-bottom: 15px;">By downloading a modified season pass file, you acknowledge that:</p>
                     <ul style="margin: 15px 0; padding-left: 20px; line-height: 1.8;">
                         <li><strong>Terms of Service Violation:</strong> Modifying season pass data violates Bethesda Softworks' Terms of Service for Fallout Shelter.</li>
                         <li><strong>Account Penalties:</strong> Using modified season pass files may result in account bans, temporary suspensions, or other penalties from Bethesda.</li>
@@ -1068,20 +656,15 @@
                         <li><strong>No Liability:</strong> The creator of Wasteland Editor is not responsible for any account penalties, data loss, or other consequences resulting from the use of this tool.</li>
                         <li><strong>Use at Your Own Risk:</strong> You use this tool entirely at your own risk. Always keep a backup of your original save file.</li>
                     </ul>
-                    <p style="margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--border-color);">
-                        <i class="fas fa-info-circle"></i> Fallout and Fallout Shelter are trademarks of Bethesda Softworks LLC. This tool is not affiliated with or endorsed by Bethesda.
-                    </p>
+                    <p style="margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--border-color);"><i class="fas fa-info-circle"></i> Fallout and Fallout Shelter are trademarks of Bethesda Softworks LLC. This tool is not affiliated with or endorsed by Bethesda.</p>
                 </div>
                 <div class="button-grid" style="margin-top: 20px;">
-                    <button class="btn btn-primary" onclick="seasonPassStep2()">
-                        <i class="fas fa-arrow-right"></i> I Have Read This
-                    </button>
+                    <button class="btn btn-primary" onclick="seasonPassStep2()"><i class="fas fa-arrow-right"></i> I Have Read This</button>
                     <button class="btn btn-secondary" onclick="closeSeasonPassWarning()">Cancel</button>
                 </div>
             </div>
         </div>
 
-        <!-- Season Pass Download Confirmation Modal - Step 2 -->
         <div id="seasonPassConfirmModal2" class="inventory-modal">
             <div class="inventory-modal-content" style="max-width: 600px;">
                 <div class="inventory-modal-header">
@@ -1089,28 +672,19 @@
                     <button class="inventory-modal-close" onclick="closeSeasonPassWarning()">×</button>
                 </div>
                 <div class="panel-section">
-                    <p style="font-size: 1.1em; margin-bottom: 20px;">
-                        Do you understand and accept all the risks listed above?
-                    </p>
+                    <p style="font-size: 1.1em; margin-bottom: 20px;">Do you understand and accept all the risks listed above?</p>
                     <div style="background: rgba(211, 47, 47, 0.1); padding: 15px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #D32F2F;">
-                        <p style="margin: 0; color: #D32F2F;">
-                            <strong>Your account could be permanently banned.</strong> There is no undo.
-                        </p>
+                        <p style="margin: 0; color: #D32F2F;"><strong>Your account could be permanently banned.</strong> There is no undo.</p>
                     </div>
-                    <p style="margin-bottom: 0;">
-                        Please confirm you understand the potential consequences:
-                    </p>
+                    <p style="margin-bottom: 0;">Please confirm you understand the potential consequences:</p>
                 </div>
                 <div class="button-grid" style="margin-top: 20px;">
-                    <button class="btn btn-primary" onclick="seasonPassStep3()">
-                        <i class="fas fa-check"></i> Yes, I Understand
-                    </button>
+                    <button class="btn btn-primary" onclick="seasonPassStep3()"><i class="fas fa-check"></i> Yes, I Understand</button>
                     <button class="btn btn-secondary" onclick="closeSeasonPassWarning()">Cancel</button>
                 </div>
             </div>
         </div>
 
-        <!-- Season Pass Download Final Confirmation Modal - Step 3 -->
         <div id="seasonPassConfirmModal3" class="inventory-modal">
             <div class="inventory-modal-content" style="max-width: 600px;">
                 <div class="inventory-modal-header">
@@ -1118,9 +692,7 @@
                     <button class="inventory-modal-close" onclick="closeSeasonPassWarning()">×</button>
                 </div>
                 <div class="panel-section">
-                    <p style="font-size: 1.1em; font-weight: bold; color: #D32F2F; margin-bottom: 20px;">
-                        Are you absolutely certain you want to continue?
-                    </p>
+                    <p style="font-size: 1.1em; font-weight: bold; color: #D32F2F; margin-bottom: 20px;">Are you absolutely certain you want to continue?</p>
                     <div style="background: rgba(211, 47, 47, 0.15); padding: 15px; border-radius: 8px; margin-bottom: 20px;">
                         <p style="margin: 5px 0; color: #D32F2F;"><strong>⚠️ This action may:</strong></p>
                         <ul style="margin: 10px 0; padding-left: 20px; color: #D32F2F;">
@@ -1130,15 +702,11 @@
                             <li>Result in no support from Bethesda or this tool</li>
                         </ul>
                     </div>
-                    <p style="margin-bottom: 15px; font-weight: bold;">
-                        Type "<span style="color: #D32F2F; font-family: monospace;">I ACCEPT THE RISK</span>" below to continue:
-                    </p>
+                    <p style="margin-bottom: 15px; font-weight: bold;">Type "<span style="color: #D32F2F; font-family: monospace;">I ACCEPT THE RISK</span>" below to continue:</p>
                     <input type="text" id="seasonPassRiskConfirmation" class="search-input" placeholder="Type the confirmation..." style="margin-bottom: 20px;">
                 </div>
                 <div class="button-grid" style="margin-top: 20px;">
-                    <button class="btn btn-primary" onclick="proceedWithSeasonPassDownload()" id="finalDownloadBtn" disabled>
-                        <i class="fas fa-download"></i> Download Modified File
-                    </button>
+                    <button class="btn btn-primary" onclick="proceedWithSeasonPassDownload()" id="finalDownloadBtn" disabled><i class="fas fa-download"></i> Download Modified File</button>
                     <button class="btn btn-secondary" onclick="closeSeasonPassWarning()">Cancel</button>
                 </div>
             </div>
@@ -1147,33 +715,19 @@
         <footer>
             <p><i class="fas fa-mountain-sun"></i> Wasteland Editor v1.0 | Fallout Shelter Save File Editor <i class="fas fa-mountain-sun"></i></p>
             <div class="field-legend">
-                <span class="legend-item">
-                    <i class="fas fa-check" style="color: #228B22; font-weight: bold;"></i> Original value
-                </span>
-                <span class="legend-item">
-                    <i class="fas fa-circle" style="color: #FF8C00; font-weight: bold;"></i> Modified
-                </span>
+                <span class="legend-item"><i class="fas fa-check" style="color: #228B22; font-weight: bold;"></i> Original value</span>
+                <span class="legend-item"><i class="fas fa-circle" style="color: #FF8C00; font-weight: bold;"></i> Modified</span>
             </div>
             <div class="footer-links">
-                <a href="https://github.com/devvyyxyz/wasteland-editor" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-box"></i> View on GitHub
-                </a>
-                <a href="https://github.com/devvyyxyz/wasteland-editor/issues" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-bug"></i> Report Issues
-                </a>
-                <a href="https://github.com/devvyyxyz/wasteland-editor/blob/main/README.md" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-book"></i> Documentation
-                </a>
-                <a href="https://github.com/devvyyxyz/wasteland-editor/releases" target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-rocket"></i> Releases
-                </a>
+                <a href="https://github.com/devvyyxyz/wasteland-editor" target="_blank" rel="noopener noreferrer"><i class="fas fa-box"></i> View on GitHub</a>
+                <a href="https://github.com/devvyyxyz/wasteland-editor/issues" target="_blank" rel="noopener noreferrer"><i class="fas fa-bug"></i> Report Issues</a>
+                <a href="https://github.com/devvyyxyz/wasteland-editor/blob/main/README.md" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Documentation</a>
+                <a href="https://github.com/devvyyxyz/wasteland-editor/releases" target="_blank" rel="noopener noreferrer"><i class="fas fa-rocket"></i> Releases</a>
             </div>
-            
             <div class="footer-section">
                 <h3><i class="fas fa-scroll"></i> License</h3>
                 <p>This project is open source and available for personal use.</p>
-                <p><strong>Fallout</strong> and <strong>Fallout Shelter</strong> are trademarks of Bethesda Softworks LLC.<br>
-                This tool is not affiliated with, endorsed by, or connected to Bethesda.</p>
+                <p><strong>Fallout</strong> and <strong>Fallout Shelter</strong> are trademarks of Bethesda Softworks LLC.<br>This tool is not affiliated with, endorsed by, or connected to Bethesda.</p>
                 <hr style="margin: 15px 0; border: none; border-top: 1px solid rgba(139, 69, 19, 0.3);">
                 <p style="font-size: 0.9em;">
                     <strong>Version:</strong> <span id="app-version">Loading...</span><br>
@@ -1184,13 +738,12 @@
         </footer>
     </div>
 
-    <script src="js/sjcl.min.js"></script>
-    <script src="js/icons.js"></script>
-    <script src="js/version.js"></script>
-    <script src="js/decryptor.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/app.js"></script>
-    </body>
-        <script src="https://devvyyxyz.github.io/devvyyxyz-popup/script.js"></script>
+    <script src="js/sjcl.min.js" defer></script>
+    <script src="js/icons.js" defer></script>
+    <script src="js/version.js" defer></script>
+    <script src="js/decryptor.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/app.js" defer></script>
+    <script src="https://devvyyxyz.github.io/devvyyxyz-popup/script.js" defer></script>
 </body>
 </html>
