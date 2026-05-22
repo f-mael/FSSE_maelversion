@@ -1,324 +1,363 @@
 # 🏜️ Wasteland Editor
 
-**The ultimate save file editor for Fallout Shelter**
+**El editor de partidas definitivo para Fallout Shelter**
 
-A user-friendly, browser-based tool to edit and enhance your Fallout Shelter experience. No installation required – just open in your browser and start editing!
-
----
-
-## 🎯 What Can You Do?
-
-- **Boost Resources**: Get unlimited Caps, Food, Water, and Power
-- **Max Out Dwellers**: Instantly level up and max all SPECIAL stats
-- **Unlock Everything**: Access all weapons, outfits, recipes, and themes
-- **Heal Your Vault**: Remove radiation and restore health to all dwellers
-- **Track Progress**: View detailed statistics about your vault
-- **Manage Inventory**: Add, remove, or edit weapons, outfits, and junk items
-- **Save Safely**: Built-in validation and change history tracking
+Una herramienta fácil de usar, basada en el navegador, para editar y mejorar tu experiencia en Fallout Shelter. No requiere instalación – ¡simplemente ábrela en tu navegador y comienza a editar!
 
 ---
 
-## 🚀 Getting Started
+## 🎯 ¿Qué puedes hacer?
 
-### Quick Start (3 Easy Steps)
-
-1. **Open the Editor**
-   - Download this project or visit the hosted version
-   - Open `index.html` in any modern browser (Chrome, Firefox, Safari, Edge)
-
-2. **Load Your Save File**
-   - Click "📁 Upload Save File"
-   - Find your Fallout Shelter save file:
-     - **Windows**: `C:\Users\YourName\AppData\Local\FalloutShelter\`
-     - **Mac**: `~/Library/Application Support/FalloutShelter/`
-     - **Mobile**: Use a file manager app to locate saves
-   - Supports `.sav`, `.dat`, and `.json` files
-
-3. **Edit & Download**
-   - Click through the tabs to edit different parts of your vault
-   - Make your changes
-   - Click "💾 Download Save" when done
-   - Replace your original save file (backup first!)
+* **Aumentar Recursos**: Obtén Chapas, Comida, Agua y Energía ilimitadas
+* **Mejorar Moradores al Máximo**: Sube de nivel instantáneamente y maximiza todas las estadísticas SPECIAL
+* **Desbloquear Todo**: Accede a todas las armas, atuendos, recetas y temas
+* **Curar tu Refugio**: Elimina la radiación y restaura la salud de todos los moradores
+* **Seguir el Progreso**: Ve estadísticas detalladas sobre tu refugio
+* **Gestionar Inventario**: Añade, elimina o edita armas, atuendos y objetos de chatarra
+* **Guardar de Forma Segura**: Validación integrada y seguimiento del historial de cambios
 
 ---
 
-## 📊 Current Features
+## 🚀 Cómo empezar
 
-| Feature | Status | Description |
-|---------|--------|-------------|
-| **Vault Settings** | ✅ Complete | Edit vault name, number, and basic settings |
-| **Resources Manager** | ✅ Complete | Modify Caps, Food, Water, Power, Stimpacks, RadAway, Nuka Cola |
-| **Lunchboxes & Items** | ✅ Complete | Edit lunchboxes, Mr. Handies, Pet Carriers, and special items |
-| **Vault Statistics** | ✅ Complete | View 40+ statistics with visual layout grid |
-| **Vault Layout Visualizer** | ✅ Complete | 3-column grid display of all rooms with color-coded tiers |
-| **Dweller Editor** | ✅ Complete | Edit names, gender, appearance, SPECIAL stats, health, happiness |
-| **Dweller Advanced Fields** | ✅ Complete | Hair style, rarity, pregnancy status, partner ID, assigned room |
-| **Dweller List Sorting** | ✅ Complete | Sort by name, level, health, gender, or happiness (ascending/descending) |
-| **Gender Icons** | ✅ Complete | Color-coded Mars/Venus icons in dweller list |
-| **Equipment System** | ✅ Complete | Assign weapons and outfits from 400+ items |
-| **Room Manager** | ✅ Complete | View and edit room types, levels, and production |
-| **Wasteland Teams** | ✅ Complete | Manage exploration teams and quests |
-| **Inventory System** | ✅ Complete | Add/remove weapons, outfits, and junk items |
-| **Season Pass Editor** | ✅ Complete | Modify season pass level, XP, rewards, and premium status |
-| **Recipes Manager** | ✅ Complete | Unlock all craftable weapons and outfits |
-| **Themes Unlocker** | ✅ Complete | Unlock all 9 vault themes |
-| **Bulk Actions** | ✅ Complete | Max stats, heal all, unlock everything with one click |
-| **Change History** | ✅ Complete | Track all modifications with timestamps |
-| **Save Validation** | ✅ Complete | Verify save file integrity before downloading |
-| **Search Function** | ✅ Complete | Search through JSON data quickly |
-| **Backup System** | ✅ Complete | Auto-backup on load with recovery options |
-| **Warning System** | ✅ Complete | Context-aware warnings for corruption and TOS violations |
-| **Empty State Messages** | ✅ Complete | Helpful prompts when no data is loaded or selected |
-| **SEO Optimization** | ✅ Complete | Full metadata for search engine visibility |
+### Inicio Rápido (3 Sencillos Pasos)
 
----
+1. **Abre el Editor**
+* Descarga este proyecto o visita la versión alojada
+* Abre `index.html` en cualquier navegador moderno (Chrome, Firefox, Safari, Edge)
 
-## 🔮 Planned Features
 
-| Feature | Priority | Description |
-|---------|----------|-------------|
-| **Objectives Editor** | 🔥 High | Complete or edit daily/weekly objectives |
-| **Dweller Assignment** | 🔥 High | See which room each dweller is working in |
-| **Pet Assignment** | 🔥 High | Assign pets to specific dwellers |
-| **Advanced Backup** | 🔥 High | Multiple save slots with comparison tools |
-| **Pregnancy Manager** | 🔶 Medium | Track pregnant dwellers and birth timers |
-| **Children System** | 🔶 Medium | Manage children and maturation progress |
-| **Construction Queue** | 🔶 Medium | View/speed up rooms being built or upgraded |
-| **Incident Manager** | 🔶 Medium | View/clear active incidents (fires, raiders, etc.) |
-| **Advanced Filters** | 🔶 Medium | Filter dwellers by level, stats, gender, status |
-| **Auto-Equip Best Gear** | 🔶 Medium | Automatically equip highest damage weapons |
-| **Dweller Templates** | 🔵 Low | Save and import dweller configurations |
-| **Vault Layout Map** | 🔵 Low | Visual representation of room placement |
-| **SPECIAL Radar Charts** | 🔵 Low | Visual stat comparison graphs |
-| **Undo/Redo System** | 🔵 Low | Step backward through changes |
+2. **Carga tu Archivo de Guardado**
+* Haz clic en "📁 Upload Save File" (Subir Archivo de Guardado)
+* Encuentra tu archivo de guardado de Fallout Shelter:
+* **Windows**: `C:\Users\TuNombre\AppData\Local\FalloutShelter\`
+* **Mac**: `~/Library/Application Support/FalloutShelter/`
+* **Móvil**: Usa una aplicación de administrador de archivos para localizar las partidas guardadas
+
+
+* Soporta archivos `.sav`, `.dat` y `.json`
+
+
+3. **Editar y Descargar**
+* Navega por las pestañas para editar diferentes partes de tu refugio
+* Realiza tus cambios
+* Haz clic en "💾 Download Save" (Descargar Partida) cuando termines
+* Reemplaza tu archivo de guardado original (¡haz una copia de seguridad primero!)
+
+
 
 ---
 
-## 🎮 How to Use Each Tab
+## 📊 Características Actuales
 
-### 🏛️ Vault Tab
-Edit your vault's basic information and resources.
-
-**What You Can Do:**
-- Change vault name and number
-- Add unlimited Caps (currency)
-- Set Food, Water, and Power to any amount
-- Modify medical supplies (Stimpacks, RadAway)
-- Add Lunchboxes, Mr. Handies, and Pet Carriers
-- View total room count and resource storage
-
-**Quick Actions:**
-- **Unlock All Rooms**: Instantly unlock all room types
-- **Unlock All Themes**: Get all 9 vault decorative themes
-- **Clear All Emergencies**: Stop all fires, radroach attacks, etc.
-
----
-
-### 👥 Dwellers Tab
-Manage every dweller in your vault.
-
-**What You Can Do:**
-- Edit names (first and last)
-- Change gender and appearance (skin color, hair color)
-- Set all 7 SPECIAL stats (Strength, Perception, Endurance, Charisma, Intelligence, Agility, Luck)
-- Modify level (1-50) and experience points
-- Adjust health, max health, and radiation
-- Set happiness (0-100%)
-- Equip weapons and outfits from 400+ items
-
-**Quick Actions:**
-- **Max All Stats**: Set all dwellers to 10 in every SPECIAL stat
-- **Max Happiness**: Set all dwellers to 100% happiness
-- **Heal All**: Remove all radiation and restore full health
+| Característica | Estado | Descripción |
+| --- | --- | --- |
+| **Configuración del Refugio** | ✅ Completo | Edita el nombre del refugio, número y ajustes básicos |
+| **Gestor de Recursos** | ✅ Completo | Modifica Chapas, Comida, Agua, Energía, Estimulantes, RadAway, Nuka Cola |
+| **Tarteras y Objetos** | ✅ Completo | Edita tarteras, Sr. Mañosos, Transportines de Mascotas y objetos especiales |
+| **Estadísticas del Refugio** | ✅ Completo | Ve más de 40 estadísticas con una cuadrícula de diseño visual |
+| **Visualizador de Diseño del Refugio** | ✅ Completo | Visualización en cuadrícula de 3 columnas de todas las salas con niveles codificados por colores |
+| **Editor de Moradores** | ✅ Completo | Edita nombres, género, apariencia, estadísticas SPECIAL, salud, felicidad |
+| **Campos Avanzados de Moradores** | ✅ Completo | Estilo de cabello, rareza, estado de embarazo, ID de pareja, sala asignada |
+| **Clasificación de la Lista de Moradores** | ✅ Completo | Ordena por nombre, nivel, salud, género o felicidad (ascendente/descendente) |
+| **Iconos de Género** | ✅ Completo | Iconos de Marte/Venus codificados por colores en la lista de moradores |
+| **Sistema de Equipamiento** | ✅ Completo | Asigna armas y atuendos de entre más de 400 objetos |
+| **Gestor de Salas** | ✅ Completo | Ve y edita tipos de salas, niveles y producción |
+| **Equipos del Yermo** | ✅ Completo | Gestiona equipos de exploración y misiones |
+| **Sistema de Inventario** | ✅ Completo | Añade/elimina armas, atuendos y objetos de chatarra |
+| **Editor del Pase de Temporada** | ✅ Completo | Modifica el nivel del pase de temporada, XP, recompensas y estado premium |
+| **Gestor de Recetas** | ✅ Completo | Desbloquea todas las armas y atuendos fabricables |
+| **Desbloqueador de Temas** | ✅ Completo | Desbloquea los 9 temas del refugio |
+| **Acciones en Masa** | ✅ Completo | Maximiza estadísticas, cura a todos, desbloquea todo con un solo clic |
+| **Historial de Cambios** | ✅ Completo | Rastrea todas las modificaciones con marcas de tiempo |
+| **Validación de Guardado** | ✅ Completo | Verifica la integridad del archivo de guardado antes de descargar |
+| **Función de Búsqueda** | ✅ Completo | Busca datos JSON rápidamente |
+| **Sistema de Copia de Seguridad** | ✅ Completo | Copia de seguridad automática al cargar con opciones de recuperación |
+| **Sistema de Advertencias** | ✅ Completo | Advertencias conscientes del contexto por corrupción y violaciones de los Términos de Servicio |
+| **Mensajes de Estado Vacío** | ✅ Completo | Indicaciones útiles cuando no hay datos cargados o seleccionados |
+| **Optimización SEO** | ✅ Completo | Metadatos completos para visibilidad en motores de búsqueda |
 
 ---
 
-### 🏗️ Rooms Tab
-View and modify your vault's rooms.
+## 🔮 Características Planeadas
 
-**What You Can Do:**
-- See all rooms in your vault
-- Edit room type and level
-- Modify merge level (room size)
-- Reset production timers
-- Clear rush cooldowns
-
----
-
-### 🌍 Wasteland Tab
-Manage dwellers exploring the wasteland.
-
-**What You Can Do:**
-- View exploration teams
-- Edit quest status
-- Track exploration resources
-
----
-
-### 🎒 Inventory Tab
-Manage your vault's storage.
-
-**What You Can Do:**
-- View all weapons, outfits, and junk items
-- Add new items with custom quantities
-- Remove unwanted items
-- Search through 400+ available items
-- Edit item damage values
-
-**Database Includes:**
-- 238 weapons (from Rusty .32 Pistol to Dragon's Maw)
-- 147 outfits (from Vault Suit to X-01 Mk VI Power Armor)
-- 21 junk/collectible items
+| Característica | Prioridad | Descripción |
+| --- | --- | --- |
+| **Editor de Objetivos** | 🔥 Alta | Completa o edita objetivos diarios/semanales |
+| **Asignación de Moradores** | 🔥 Alta | Ve en qué sala está trabajando cada morador |
+| **Asignación de Mascotas** | 🔥 Alta | Asigna mascotas a moradores específicos |
+| **Copia de Seguridad Avanzada** | 🔥 Alta | Múltiples espacios de guardado con herramientas de comparación |
+| **Gestor de Embarazos** | 🔶 Media | Rastrea moradores embarazadas y temporizadores de nacimiento |
+| **Sistema de Niños** | 🔶 Media | Gestiona niños y su progreso de maduración |
+| **Cola de Construcción** | 🔶 Media | Ve/acelera las salas que se están construyendo o mejorando |
+| **Gestor de Incidentes** | 🔶 Media | Ve/limpia incidentes activos (incendios, saqueadores, etc.) |
+| **Filtros Avanzados** | 🔶 Media | Filtra moradores por nivel, estadísticas, género, estado |
+| **Auto-Equipar Mejor Equipo** | 🔶 Media | Equipa automáticamente las armas de mayor daño |
+| **Plantillas de Moradores** | 🔵 Baja | Guarda e importa configuraciones de moradores |
+| **Mapa de Diseño del Refugio** | 🔵 Baja | Representación visual de la ubicación de las salas |
+| **Gráficos de Radar SPECIAL** | 🔵 Baja | Gráficos visuales de comparación de estadísticas |
+| **Sistema de Deshacer/Rehacer** | 🔵 Baja | Retrocede paso a paso en los cambios |
 
 ---
 
-### 🎁 Season Pass Tab
-Edit your season pass progress.
+## 🎮 Cómo usar cada Pestaña
 
-**What You Can Do:**
-- Set season pass level
-- Modify experience points
-- Enable premium pass
-- Unlock all rewards
+### 🏛️ Pestaña Refugio (Vault)
 
----
+Edita la información básica y los recursos de tu refugio.
 
-### 🔧 Others Tab
-Additional vault features.
+**Lo que puedes hacer:**
 
-**What You Can Do:**
-- Unlock all recipes (25+ craftable items)
-- Choose from 30+ pet types
-- Unlock vault themes
+* Cambiar el nombre y número del refugio
+* Añadir Chapas ilimitadas (moneda)
+* Establecer Comida, Agua y Energía a cualquier cantidad
+* Modificar suministros médicos (Estimulantes, RadAway)
+* Añadir Tarteras, Sr. Mañosos y Transportines de Mascotas
+* Ver el recuento total de salas y almacenamiento de recursos
 
----
+**Acciones Rápidas:**
 
-### 📝 Raw JSON Tab
-For advanced users who want direct access to the save file data.
+* **Unlock All Rooms (Desbloquear todas las salas)**: Desbloquea instantáneamente todos los tipos de salas
+* **Unlock All Themes (Desbloquear todos los temas)**: Obtén los 9 temas decorativos del refugio
+* **Clear All Emergencies (Limpiar todas las emergencias)**: Detén todos los incendios, ataques de mutarachas, etc.
 
 ---
 
-## 📈 Vault Statistics Dashboard
+### 👥 Pestaña Moradores (Dwellers)
 
-View 40+ real-time statistics about your vault:
+Gestiona a cada morador de tu refugio.
 
-**Population Stats:**
-- Total dwellers
-- Average level
-- Max level dwellers (level 50)
-- Average happiness
+**Lo que puedes hacer:**
 
-**Resources:**
-- Total Caps
-- Food, Water, Power storage
-- Total rooms
+* Editar nombres (nombre y apellido)
+* Cambiar género y apariencia (color de piel, color de cabello)
+* Establecer las 7 estadísticas SPECIAL (Fuerza, Percepción, Resistencia, Carisma, Inteligencia, Agilidad, Suerte)
+* Modificar nivel (1-50) y puntos de experiencia
+* Ajustar salud, salud máxima y radiación
+* Establecer felicidad (0-100%)
+* Equipar armas y atuendos de entre más de 400 objetos
 
-**Equipment:**
-- Total weapons, outfits, junk
-- Equipped dwellers count
+**Acciones Rápidas:**
 
-**SPECIAL Averages:**
-- Average stats for all 7 attributes
-
-**Health & Combat:**
-- Average health
-- Irradiated dwellers
-- Injured dwellers
-
-**Vault Info:**
-- Unlocked themes and recipes
+* **Max All Stats (Maximizar todas las estadísticas)**: Establece a todos los moradores en 10 en cada estadística SPECIAL
+* **Max Happiness (Felicidad Máxima)**: Establece a todos los moradores al 100% de felicidad
+* **Heal All (Curar a Todos)**: Elimina toda la radiación y restaura la salud por completo
 
 ---
 
-## ⚠️ Important Information
+### 🏗️ Pestaña Salas (Rooms)
 
-### Safety First
-- **Always backup your original save file** before making changes
-- Use the built-in validation to check for errors before downloading
-- Review the change history to track what was modified
+Ve y modifica las salas de tu refugio.
 
-### Legal & Ethical Use
-- ✅ Edit your own personal save files
-- ✅ Use for single-player enjoyment
-- ✅ Create backups and experiments
-- ❌ Don't distribute modified saves with premium content
-- ❌ Respect Bethesda's Terms of Service
-- ❌ Don't use for competitive advantages in online features
+**Lo que puedes hacer:**
 
-### File Compatibility
-- Supports `.sav` (encrypted game files)
-- Supports `.dat` (encrypted game files)
-- Supports `.json` (plain text for editing)
-- Downloads in both encrypted (.sav) and plain (.json) formats
+* Ver todas las salas en tu refugio
+* Editar el tipo y nivel de la sala
+* Modificar el nivel de fusión (tamaño de la sala)
+* Restablecer temporizadores de producción
+* Limpiar tiempos de espera por modo exprés (rush)
 
 ---
 
-## 🛠️ Troubleshooting
+### 🌍 Pestaña Yermo (Wasteland)
 
-### My file won't load
-- **Check the file format**: Make sure it's a Fallout Shelter save file
-- **Try both formats**: If `.sav` doesn't work, try exporting as `.json` first
-- **Check file size**: Corrupted saves may be 0 bytes or unusually small
+Gestiona los moradores que exploran el yermo.
 
-### Changes aren't saving
-- Click the **"💾 Download Save"** button (browser can't modify files directly)
-- Choose format: `.sav` for in-game use, `.json` for further editing
-- Replace your original save file with the downloaded one
+**Lo que puedes hacer:**
 
-### Game doesn't recognize my edited save
-- Make sure you saved as `.sav` format (encrypted)
-- Keep the original filename
-- Place it in the correct save folder
-- Restart the game completely
-
-### Validation warnings appear
-- Read the warnings carefully
-- Minor warnings are usually safe to ignore
-- Critical errors may corrupt your save – fix before downloading
+* Ver equipos de exploración
+* Editar el estado de las misiones
+* Rastrear los recursos de exploración
 
 ---
 
-## 💡 Tips & Tricks
+### 🎒 Pestaña Inventario (Inventory)
 
-1. **Start Small**: Make one or two changes first to ensure everything works
-2. **Use Statistics**: Check vault stats before and after changes to verify updates
-3. **Track Changes**: Use the Change History button to see what you modified
-4. **Test Downloads**: Download as `.json` first to review changes, then as `.sav` for the game
-5. **Keep Backups**: The editor auto-creates one backup, but keep your own copies too
-6. **Search Feature**: Use the search box (🔍) to find specific data quickly
+Gestiona el almacenamiento de tu refugio.
 
----
+**Lo que puedes hacer:**
 
-## 🌐 Browser Compatibility
+* Ver todas las armas, atuendos y objetos de chatarra
+* Añadir nuevos objetos con cantidades personalizadas
+* Eliminar objetos no deseados
+* Buscar a través de más de 400 objetos disponibles
+* Editar los valores de daño de los objetos
 
-- ✅ Chrome / Edge (Recommended)
-- ✅ Firefox
-- ✅ Safari
-- ✅ Opera
-- ✅ Mobile browsers (responsive design)
+**La base de datos incluye:**
 
-**Requires**: Modern browser with JavaScript enabled (2020+)
+* 238 armas (desde la Pistola .32 Oxidada hasta las Fauces de Dragón)
+* 147 atuendos (desde el Traje del Refugio hasta la Servoarmadura X-01 Mk VI)
+* 21 objetos de chatarra/coleccionables
 
 ---
 
-## 📞 Support & Community
+### 🎁 Pestaña Pase de Temporada (Season Pass)
 
-- **Issues**: [Report bugs on GitHub](https://github.com/devvyyxyz/wasteland-editor/issues)
-- **Documentation**: [Read the full guide](https://github.com/devvyyxyz/wasteland-editor/blob/main/README.md)
-- **Releases**: [Download latest version](https://github.com/devvyyxyz/wasteland-editor/releases)
-- **Source Code**: [View on GitHub](https://github.com/devvyyxyz/wasteland-editor)
+Edita tu progreso del pase de temporada.
 
----
+**Lo que puedes hacer:**
 
-## 📜 License
-
-This project is open source and available for personal use.
-
-**Fallout** and **Fallout Shelter** are trademarks of Bethesda Softworks LLC.  
-This tool is not affiliated with, endorsed by, or connected to Bethesda.
+* Establecer el nivel del pase de temporada
+* Modificar los puntos de experiencia
+* Habilitar el pase premium
+* Desbloquear todas las recompensas
 
 ---
 
-**Version**: 1.0  
-**Last Updated**: February 2026  
-**Made with ⚡ for Vault-Tec Overseers**
+### 🔧 Pestaña Otros (Others)
+
+Características adicionales del refugio.
+
+**Lo que puedes hacer:**
+
+* Desbloquear todas las recetas (25+ objetos fabricables)
+* Elegir entre más de 30 tipos de mascotas
+* Desbloquear temas del refugio
+
+---
+
+### 📝 Pestaña JSON en bruto (Raw JSON)
+
+Para usuarios avanzados que desean acceso directo a los datos del archivo de guardado.
+
+---
+
+## 📈 Panel de Estadísticas del Refugio
+
+Ve más de 40 estadísticas en tiempo real sobre tu refugio:
+
+**Estadísticas de Población:**
+
+* Total de moradores
+* Nivel promedio
+* Moradores de nivel máximo (nivel 50)
+* Felicidad promedio
+
+**Recursos:**
+
+* Total de Chapas
+* Almacenamiento de Comida, Agua, Energía
+* Total de salas
+
+**Equipamiento:**
+
+* Total de armas, atuendos, chatarra
+* Cantidad de moradores equipados
+
+**Promedios SPECIAL:**
+
+* Estadísticas promedio para los 7 atributos
+
+**Salud y Combate:**
+
+* Salud promedio
+* Moradores irradiados
+* Moradores heridos
+
+**Info. del Refugio:**
+
+* Temas y recetas desbloqueados
+
+---
+
+## ⚠️ Información Importante
+
+### La Seguridad es lo Primero
+
+* **Siempre haz una copia de seguridad de tu archivo original** antes de realizar cambios
+* Usa la validación integrada para comprobar si hay errores antes de descargar
+* Revisa el historial de cambios para rastrear qué fue modificado
+
+### Uso Legal y Ético
+
+* ✅ Edita tus propios archivos de guardado personales
+* ✅ Úsalo para disfrute en modo de un jugador
+* ✅ Crea copias de seguridad y experimentos
+* ❌ No distribuyas partidas guardadas modificadas con contenido premium
+* ❌ Respeta los Términos de Servicio de Bethesda
+* ❌ No lo uses para obtener ventajas competitivas en funciones en línea
+
+### Compatibilidad de Archivos
+
+* Soporta `.sav` (archivos del juego encriptados)
+* Soporta `.dat` (archivos del juego encriptados)
+* Soporta `.json` (texto plano para edición)
+* Descargas disponibles tanto en formato encriptado (.sav) como en texto plano (.json)
+
+---
+
+## 🛠️ Solución de Problemas
+
+### Mi archivo no carga
+
+* **Verifica el formato del archivo**: Asegúrate de que sea un archivo de guardado de Fallout Shelter
+* **Prueba ambos formatos**: Si `.sav` no funciona, intenta exportar primero como `.json`
+* **Verifica el tamaño del archivo**: Las partidas corruptas pueden ser de 0 bytes o inusualmente pequeñas
+
+### Los cambios no se guardan
+
+* Haz clic en el botón **"💾 Download Save" (Descargar Partida)** (el navegador no puede modificar los archivos directamente)
+* Elige el formato: `.sav` para uso dentro del juego, `.json` para edición adicional
+* Reemplaza tu archivo de guardado original con el descargado
+
+### El juego no reconoce mi partida editada
+
+* Asegúrate de haber guardado en formato `.sav` (encriptado)
+* Mantén el nombre de archivo original
+* Colócalo en la carpeta correcta de partidas guardadas
+* Reinicia el juego por completo
+
+### Aparecen advertencias de validación
+
+* Lee las advertencias cuidadosamente
+* Las advertencias menores generalmente se pueden ignorar de forma segura
+* Los errores críticos pueden corromper tu partida – soluciónalos antes de descargar
+
+---
+
+## 💡 Consejos y Trucos
+
+1. **Empieza Poco a Poco**: Haz uno o dos cambios primero para asegurarte de que todo funciona
+2. **Usa Estadísticas**: Revisa las estadísticas del refugio antes y después de los cambios para verificar las actualizaciones
+3. **Rastrea Cambios**: Usa el botón de Historial de Cambios para ver qué modificaste
+4. **Prueba las Descargas**: Descarga como `.json` primero para revisar los cambios, luego como `.sav` para el juego
+5. **Guarda Copias de Seguridad**: El editor crea una copia automáticamente, pero guarda tus propias copias también
+6. **Función de Búsqueda**: Usa el cuadro de búsqueda (🔍) para encontrar datos específicos rápidamente
+
+---
+
+## 🌐 Compatibilidad de Navegadores
+
+* ✅ Chrome / Edge (Recomendado)
+* ✅ Firefox
+* ✅ Safari
+* ✅ Opera
+* ✅ Navegadores móviles (diseño responsivo)
+
+**Requisitos**: Navegador moderno con JavaScript habilitado (2020+)
+
+---
+
+## 📞 Soporte y Comunidad
+
+* **Problemas**: [Reportar errores en GitHub](https://github.com/devvyyxyz/wasteland-editor/issues)
+* **Documentación**: [Lee la guía completa](https://github.com/devvyyxyz/wasteland-editor/blob/main/README.md)
+* **Lanzamientos**: [Descarga la última versión](https://github.com/devvyyxyz/wasteland-editor/releases)
+* **Código Fuente**: [Ver en GitHub](https://github.com/devvyyxyz/wasteland-editor)
+
+---
+
+## 📜 Licencia
+
+Este proyecto es de código abierto y está disponible para uso personal.
+
+**Fallout** y **Fallout Shelter** son marcas registradas de Bethesda Softworks LLC.
+Esta herramienta no está afiliada, respaldada ni conectada con Bethesda.
+
+---
+
+**Versión**: 1.0
+
+**Última Actualización**: Febrero de 2026
+
+**Hecho con ⚡ para Supervisores de Vault-Tec**
